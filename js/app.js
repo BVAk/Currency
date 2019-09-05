@@ -37,5 +37,26 @@ function openTab(evt, tabName) {
         function(data) {
          $('#amountDiv').html(data);      
         });       
-        addDB();
+        
         }
+
+      function checkb(){
+        var length=document.chk.checkCurrency.length;
+        let result=new Array();
+        var j=0;
+        for(i=0;i<length;i++){
+          var chVal=document.chk.checkCurrency[i].checked;
+          if(chVal){
+            result.push(document.chk.checkCurrency[i].value);
+          }
+        }
+        $.post("checkb.php", { result: result},
+        function(data) {
+          $('#stateFrom').html(data);      
+         }); 
+         $.post("checkbin.php", { result: result},
+         function(data) {
+           $('#stateIn').html(data);      
+          }); 
+       
+      }  
