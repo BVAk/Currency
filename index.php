@@ -20,6 +20,7 @@
 <div id="Calculate" class="tabcontent">
 <form class="form-sigmin" method="POST" id="calculateForm" action="addDB.php" >
        <h2>Calculate currency</h2>
+       
   <label >Change:</label>
   <input type="text" class="form-control" id="amountFrom" name="amountFrom" > 
     <?php 

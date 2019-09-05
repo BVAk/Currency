@@ -39,15 +39,3 @@ function openTab(evt, tabName) {
         });       
         addDB();
         }
-        function addDB(){
-            var add= document.getElementById('add').value;
-            var dataString='add'+add;
-             $.ajax({
-                 type:"post",
-                 url:"addDB.php",
-                 data:dataString,
-                 cache:false,
-                 success:function(html){alert('ok');}
-             });
-             return false;
-        }

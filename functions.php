@@ -38,6 +38,5 @@ $r_course_curr=round($course_curr,2);
 $connection=mysqli_connect( 'localhost','root','','test');
 echo "<input type='text' id='amountIn' class='form-control' readonly value='$r_course_curr' > ";
 $query_history="INSERT INTO history(date_change,change_amount,change_currency,get_change_amount,get_change_currency) VALUES('$date','$amountFrom','$currencyFrom','$r_course_curr','$currencyIn')";
-echo "<input type='text' id='add' value=$query_history >";
-
+$result=mysqli_query($connection,$query_history);
 ?>
